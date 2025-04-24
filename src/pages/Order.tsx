@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
-import { WhatsApp } from 'lucide-react';
+import { MessageSquareText } from 'lucide-react';
 import { toast } from "sonner";
 import { useCart } from '@/hooks/useCart';
 import { menuItems } from '@/data/menuItems';
@@ -268,7 +267,7 @@ const OrderPage = () => {
                 type="submit"
                 className="w-full bg-foodie-orange hover:bg-foodie-red text-white flex items-center justify-center gap-2"
               >
-                <WhatsApp className="h-5 w-5" />
+                <MessageSquareText className="h-5 w-5" />
                 {items.length > 0 ? "Place Order via WhatsApp" : "Continue to WhatsApp"}
               </Button>
             </form>

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Instagram, Twitter, WhatsApp } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Twitter, MessageSquareText } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -19,7 +19,7 @@ const Footer = () => {
                 <Twitter className="h-5 w-5" />
               </a>
               <a href="https://wa.me/61412345678" target="_blank" rel="noopener noreferrer" className="hover:text-foodie-orange transition-colors">
-                <WhatsApp className="h-5 w-5" />
+                <MessageSquareText className="h-5 w-5" />
               </a>
             </div>
           </div>

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, MessageSquare } from 'lucide-react';
+import { ShoppingCart, MessageSquareText } from 'lucide-react';
 import { useCart, MenuItem as MenuItemType } from '@/hooks/useCart';
 
 interface MenuItemProps {
@@ -51,7 +51,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
             variant="outline" 
             className="border-foodie-orange text-foodie-orange hover:bg-foodie-orange hover:text-white"
           >
-            <MessageSquare className="h-4 w-4" />
+            <MessageSquareText className="h-4 w-4" />
           </Button>
         </div>
       </div>

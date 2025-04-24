@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Instagram, Twitter, WhatsApp } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Twitter, MessageSquareText } from 'lucide-react';
 
 const ContactPage = () => {
   const handleWhatsAppClick = () => {
@@ -66,7 +65,7 @@ const ContactPage = () => {
                 
                 <div className="flex items-center gap-4">
                   <div className="bg-foodie-yellow/50 w-12 h-12 rounded-full flex items-center justify-center">
-                    <WhatsApp className="h-6 w-6 text-foodie-orange" />
+                    <MessageSquareText className="h-6 w-6 text-foodie-orange" />
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">WhatsApp</h3>
@@ -77,7 +76,7 @@ const ContactPage = () => {
                       onClick={handleWhatsAppClick}
                       className="bg-[#25D366] hover:bg-[#128C7E] mt-2 text-white flex items-center gap-2"
                     >
-                      <WhatsApp className="h-4 w-4" />
+                      <MessageSquareText className="h-4 w-4" />
                       Chat on WhatsApp
                     </Button>
                   </div>
