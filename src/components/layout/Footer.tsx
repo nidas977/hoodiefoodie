@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-foodie-orange mt-1" />
-                <span>Check our social media for today's location!</span>
+                <span>Greenway Skate Park, 2900 ACT, Australia</span>
               </li>
             </ul>
           </div>

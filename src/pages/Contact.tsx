@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Instagram, Twitter, MessageSquareText } from 'lucide-react';
@@ -161,13 +162,13 @@ const ContactPage = () => {
             <h2 className="text-3xl font-bold mb-4">Find Us Today</h2>
             <div className="w-24 h-1 bg-foodie-orange mx-auto mb-6"></div>
             <p className="text-gray-700 max-w-2xl mx-auto">
-              Our current location is shown on the map below. We update this daily!
+              Our current location is Greenway Skate Park in Canberra, ACT.
             </p>
           </div>
 
           <div className="h-[450px] w-full rounded-lg overflow-hidden shadow-md">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26522.93295990632!2d151.1997!3d-33.8688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae401e8b983f%3A0x5017d681632ccc0!2sSydney%20NSW%2C%20Australia!5e0!3m2!1sen!2sus!4v1587234666159!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3255.414876316414!2d149.06673627617214!3d-35.39947837254217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b17ae9df6d06977%3A0xf9fd3767ea851de6!2sGreenway%2C%20Australian%20Capital%20Territory%202900!5e0!3m2!1sen!2sau!4v1696244364218!5m2!1sen!2sau" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
@@ -180,7 +181,7 @@ const ContactPage = () => {
 
           <div className="mt-6 text-center">
             <p className="text-gray-500 italic">
-              * Map shows our regular Sydney CBD location. For today's exact location, please check our social media.
+              Location: Greenway Skate Park, 2900 ACT, Australia
             </p>
           </div>
         </div>
