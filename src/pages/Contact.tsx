@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Instagram, Twitter, MessageSquareText } from 'luci
 
 const ContactPage = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/61412345678', '_blank');
+    window.open('https://wa.me/0403959785', '_blank');
   };
 
   return (
@@ -38,7 +38,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Phone</h3>
-                    <a href="tel:+61412345678" className="text-foodie-orange hover:underline">+61 412 345 678</a>
+                    <a href="tel:+610403959785" className="text-foodie-orange hover:underline">+61 0403959785</a>
                   </div>
                 </div>
                 
@@ -48,7 +48,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
-                    <a href="mailto:info@hoodieandfoodie.com.au" className="text-foodie-orange hover:underline">info@hoodieandfoodie.com.au</a>
+                    <a href="mailto:hoodoeandfoodie@gmail.com" className="text-foodie-orange hover:underline">hoodoeandfoodie@gmail.com</a>
                   </div>
                 </div>
                 
