@@ -5,7 +5,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/',  // This is crucial for Cloudflare Pages
+  base: '/',  // Essential for Cloudflare Pages
   server: {
     host: "::",
     port: 8080,
@@ -25,5 +25,13 @@ export default defineConfig(({ mode }) => ({
     outDir: 'dist',
     assetsDir: 'assets',
     minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          routing: ['react-router-dom'],
+        }
+      }
+    }
   },
 }));
