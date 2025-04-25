@@ -4,28 +4,23 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/', // Essential for Cloudflare Pages
-  server: {
-    host: "::",
-    port: 8080,
-    mimeTypes: {
-      // Ensure correct MIME type for .js files
-      'application/javascript': ['js'],
-    },
-  },
+  base: './', // ✅ Use './' for correct relative paths on Cloudflare Pages
+
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+
   build: {
-    sourcemap: true,
     outDir: 'dist',
     assetsDir: 'assets',
+    sourcemap: true,
     minify: 'terser',
     rollupOptions: {
       output: {
@@ -35,5 +30,11 @@ export default defineConfig(({ mode }) => ({
         },
       },
     },
+  },
+
+  server: {
+    host: "localhost", // or '0.0.0.0' for network access
+    port: 8080,
+    strictPort: true,
   },
 }));
