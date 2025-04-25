@@ -1,4 +1,3 @@
-
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -16,6 +15,7 @@ if (!container) {
 const root = createRoot(container);
 
 // Render app
+console.log('Rendering the application...');
 root.render(
   <StrictMode>
     <App />
