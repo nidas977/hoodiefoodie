@@ -13,7 +13,7 @@ if (!container) {
 const root = createRoot(container);
 
 // Error Boundary Component
-class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
+class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
   state = { hasError: false };
 
   static getDerivedStateFromError(): { hasError: boolean } {
