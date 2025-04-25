@@ -4,8 +4,16 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: './', // ✅ Use './' for correct relative paths on Cloudflare Pages
-
+  base: './', // Use relative base for local development
+  server: {
+    host: "localhost",
+    port: 3000,
+    strictPort: true,
+    mimeTypes: {
+      // Ensure correct MIME type for .js files
+      'application/javascript': ['js'],
+    },
+  },
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
@@ -18,10 +26,9 @@ export default defineConfig(({ mode }) => ({
   },
 
   build: {
+    sourcemap: true,
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: true,
-    minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -30,11 +37,5 @@ export default defineConfig(({ mode }) => ({
         },
       },
     },
-  },
-
-  server: {
-    host: "localhost", // or '0.0.0.0' for network access
-    port: 8080,
-    strictPort: true,
   },
 }));
