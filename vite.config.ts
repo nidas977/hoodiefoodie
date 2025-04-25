@@ -4,15 +4,14 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: './', // Use relative base for local development
+  base: '/', // Ensure base path is set for Cloudflare Pages
   server: {
-    host: "localhost",
+    host: "0.0.0.0",
     port: 3000,
-    strictPort: true,
-    mimeTypes: {
-      // Ensure correct MIME type for .js files
-      'application/javascript': ['js'],
-    },
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
   },
   plugins: [
     react(),
