@@ -4,9 +4,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/',  // Change from './' to '/' for Cloudflare Pages
+  base: '/',  // This is crucial for Cloudflare Pages
   server: {
     host: "::",
     port: 8080,
