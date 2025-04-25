@@ -12,17 +12,15 @@ if (!container) {
 
 const root = createRoot(container);
 
-console.log('Rendering the application...');
-
 // Error Boundary Component
-class ErrorBoundary extends React.Component {
+class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
   state = { hasError: false };
 
-  static getDerivedStateFromError() {
+  static getDerivedStateFromError(): { hasError: boolean } {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
     console.error('Error caught in ErrorBoundary:', error, errorInfo);
   }
 
