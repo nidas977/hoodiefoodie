@@ -5,15 +5,6 @@
   "exclude": [
     "/build/*",
     "/static/*",
-    "/assets/*",
-    "/*.js",
-    "/*.css",
-    "/*.map",
-    "/*.ico",
-    "/*.png",
-    "/*.svg",
-    "/*.jpg",
-    "/*.jpeg",
-    "/*.gif"
+    "/assets/*"
   ]
 }
